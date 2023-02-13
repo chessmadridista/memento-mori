@@ -1,7 +1,9 @@
 .year {
-    display: flex;
-    justify-content: space-evenly;
-    width: 1000px;
-    margin: auto;
-    margin-top: 2px;
+    display: inline-block;
+    margin-top: 0px;
+    background-color: #eee;
+}
+
+.year-no {
+    font-size: small;
 }
