@@ -11,7 +11,7 @@ function Year({ yearNo, lifeExpectancy }) {
 
     return (
         <div className="year">
-            <span className="year-no">{ yearNo }</span>{ year }
+            <span className="year-no">{ String(yearNo).padStart(2, '0') }</span>{ year }
         </div>
     );
 }
