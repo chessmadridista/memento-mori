@@ -1,11 +1,11 @@
 import './Year.css';
 import Week from './Week';
 
-function Year({ yearNo }) {
+function Year({ yearNo, lifeExpectancy }) {
     let year = Array.from(Array(52).keys());
     year = year.map((week) => {
         return (
-            <Week key={ week } yearNo={ yearNo } />
+            <Week key={ week } yearNo={ yearNo } lifeExpectancy={ lifeExpectancy } />
         );
     });
 
