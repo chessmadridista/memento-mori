@@ -11,7 +11,7 @@ function Year({ yearNo }) {
 
     return (
         <div className="year">
-            <span>{ yearNo }</span>{ year }
+            <span className="year-no">{ yearNo }</span>{ year }
         </div>
     );
 }

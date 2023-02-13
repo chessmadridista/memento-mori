@@ -8,7 +8,7 @@ function Week({ yearNo }) {
     }
 
     return (
-        <div className={ `week + ${ optionalClassName }` }></div>
+        <div className={ `week ${ optionalClassName }` }></div>
     );
 }
 
