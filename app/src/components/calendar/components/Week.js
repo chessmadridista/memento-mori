@@ -1,9 +1,9 @@
 import './Week.css';
 
-function Week({ yearNo, lifeExpectancy }) {
+function Week({ yearNo, yearsTillToday }) {
     let optionalClassName = "";
 
-    if (yearNo < lifeExpectancy) {
+    if (yearNo < yearsTillToday) {
         optionalClassName = "is-year-over";
     }
 
