@@ -1,6 +1,5 @@
 import './Calendar.css';
 import Year from './components/Year';
-// import { useState } from 'react';
 
 function Calendar() {
     let yearsTillToday = 25;
