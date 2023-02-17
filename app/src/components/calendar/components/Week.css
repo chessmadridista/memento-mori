@@ -4,11 +4,11 @@
     width: 10px;
     border-radius: 2px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: rgb(188, 188, 255);
 }
 
 .is-year-over {
-    background-color: rgb(54, 54, 54);
+    background-color: #030050;
 }
 
 .middle-week {
