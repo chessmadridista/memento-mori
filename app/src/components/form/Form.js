@@ -22,13 +22,13 @@ function FormContainer() {
                     <DatePicker className={ styles.input } placeholder="1996-09-15" />
                 </Form.Item>
                 <Form.Item
-                    label="Life expectancy"
-                    name="life expectancy"
+                    label="Death age"
+                    name="death age"
                     rules={
                         [
                             {
                                 required: true,
-                                message: "Please enter your life expectancy.",
+                                message: "Please enter age at your death.",
                             }
                         ]
                     }>
