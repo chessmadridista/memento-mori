@@ -1,6 +1,6 @@
 import './App.scss';
 import Calendar from './components/calendar/Calendar';
-import Form from './components/form/Form';
+import FormContainer from './components/form/Form';
 import { useState } from 'react';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <h1>Memento Mori Calendar</h1>
-      { showForm ? <Form /> : <Calendar /> }
+      { showForm ? <FormContainer /> : <Calendar /> }
     </>
   );
 }

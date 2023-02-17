@@ -1,19 +1,45 @@
 import styles from './Form.module.scss';
+import { Card } from 'antd';
+import { DatePicker, Button, Checkbox, Form, InputNumber } from 'antd';
 
-function Form() {
+
+function FormContainer() {
     return (
-        <form>
-            <div className={ styles['field__container'] }>
-                <label htmlFor="birthDate">Please select your birthdate</label>
-                <input type="date" id="birthDate"></input>
-            </div>
-            <div className={ styles['field__container'] }>
-                <label htmlFor="lifeExpectancy">Please enter your life expectancy</label>
-                <input type="number" id="lifeExpectancy" min="0" max="150"></input>
-            </div>
-            <button className={ styles['btn__submit'] }>Update</button>
-        </form>
+        <Card className={ styles.card }>
+            <Form className={ styles.form }
+            layout="vertical">
+                <Form.Item
+                    label="Birthdate"
+                    name="birthdate"
+                    rules={
+                        [
+                            {
+                                required: true,
+                                message: "Please enter your birth date.",
+                            },
+                        ]
+                    }>
+                    <DatePicker className={ styles.input } />
+                </Form.Item>
+                <Form.Item
+                    label="Life expectancy"
+                    name="life expectancy"
+                    rules={
+                        [
+                            {
+                                required: true,
+                                message: "Please enter your life expectancy.",
+                            }
+                        ]
+                    }>
+                    <InputNumber className={ styles.input } />
+                </Form.Item>
+                <Form.Item>
+                    <Button className={ styles.input } type="primary" htmlType="submit">Show calendar</Button>
+                </Form.Item>
+            </Form>
+        </Card>
     );
 }
 
-export default Form;
+export default FormContainer;
