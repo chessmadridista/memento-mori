@@ -1,4 +1,4 @@
-import './Calendar.css';
+import styles from './Calendar.module.css';
 import Year from './components/Year';
 
 function Calendar() {
@@ -11,7 +11,7 @@ function Calendar() {
     });
 
     return (
-        <div className="calendar">
+        <div className={ styles.calendar }>
             { years }
         </div>
     );
