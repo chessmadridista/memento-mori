@@ -35,7 +35,7 @@ function FormContainer() {
                     <InputNumber className={ styles.input } placeholder="80" />
                 </Form.Item>
                 <Form.Item>
-                    <Button className={ styles.input } type="primary" htmlType="submit">Show calendar</Button>
+                    <Button type="primary" htmlType="submit" block>Show calendar</Button>
                 </Form.Item>
             </Form>
         </Card>
