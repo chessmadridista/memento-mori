@@ -9,8 +9,9 @@ function FormContainer() {
             <Form className={ styles.form }
             layout="vertical">
                 <Form.Item
-                    label="Birthdate"
+                    label="Birthdate (YYYY-MM-DD)"
                     name="birthdate"
+                    // placeholder="1996-09-15"
                     rules={
                         [
                             {
@@ -22,7 +23,7 @@ function FormContainer() {
                     <DatePicker className={ styles.input } />
                 </Form.Item>
                 <Form.Item
-                    label="Life expectancy"
+                    label="Life expectancy (years)"
                     name="life expectancy"
                     rules={
                         [
