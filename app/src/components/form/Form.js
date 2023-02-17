@@ -11,7 +11,6 @@ function FormContainer() {
                 <Form.Item
                     label="Birthdate (YYYY-MM-DD)"
                     name="birthdate"
-                    // placeholder="1996-09-15"
                     rules={
                         [
                             {
@@ -20,7 +19,7 @@ function FormContainer() {
                             },
                         ]
                     }>
-                    <DatePicker className={ styles.input } />
+                    <DatePicker className={ styles.input } placeholder="1996-09-15" />
                 </Form.Item>
                 <Form.Item
                     label="Life expectancy (years)"
@@ -33,7 +32,7 @@ function FormContainer() {
                             }
                         ]
                     }>
-                    <InputNumber className={ styles.input } />
+                    <InputNumber className={ styles.input } placeholder="80" />
                 </Form.Item>
                 <Form.Item>
                     <Button className={ styles.input } type="primary" htmlType="submit">Show calendar</Button>
