@@ -22,7 +22,7 @@ function FormContainer() {
                     <DatePicker className={ styles.input } placeholder="1996-09-15" />
                 </Form.Item>
                 <Form.Item
-                    label="Life expectancy (years)"
+                    label="Life expectancy"
                     name="life expectancy"
                     rules={
                         [
@@ -32,7 +32,7 @@ function FormContainer() {
                             }
                         ]
                     }>
-                    <InputNumber className={ styles.input } placeholder="80" />
+                    <InputNumber className={ styles.input } addonAfter="years" placeholder="80" />
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" block>Show calendar</Button>
