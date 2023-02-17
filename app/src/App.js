@@ -1,15 +1,16 @@
-import './App.scss';
-import Calendar from './components/calendar/Calendar';
+import styles from './App.module.scss';
+// import Calendar from './components/calendar/Calendar';
 import FormContainer from './components/form/Form';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function App() {
-  const [showForm, setShowForm] = useState(true);
+  // const [showForm, setShowForm] = useState(true);
 
   return (
     <>
-      <h1>Memento Mori Calendar</h1>
-      { showForm ? <FormContainer /> : <Calendar /> }
+      <h1 className={ styles.heading }>Memento Mori Calendar</h1>
+      <FormContainer />
+      {/* { showForm ? <FormContainer /> : <Calendar /> } */}
     </>
   );
 }

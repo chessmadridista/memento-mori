@@ -1,21 +1,12 @@
 @keyframes fluid-background-color {
   0% {
-    background-color: red;
+    background-color: rgb(205, 253, 255);
   }
-  20% {
-    background-color: blue;
-  }
-  40% {
-    background-color: green;
-  }
-  60% {
-    background-color: yellow;
-  }
-  80% {
-    background-color: pink;
+  50% {
+    background-color: rgb(221, 213, 255);
   }
   100% {
-    background-color: red;
+    background-color: rgb(205, 253, 255);
   }
 }
 
@@ -27,7 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   animation-name: fluid-background-color;
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
 }
 

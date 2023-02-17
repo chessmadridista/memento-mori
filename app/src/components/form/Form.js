@@ -1,6 +1,6 @@
 import styles from './Form.module.scss';
 import { Card } from 'antd';
-import { DatePicker, Button, Checkbox, Form, InputNumber } from 'antd';
+import { DatePicker, Button, Form, InputNumber } from 'antd';
 
 
 function FormContainer() {
