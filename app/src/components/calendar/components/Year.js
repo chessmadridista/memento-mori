@@ -8,10 +8,16 @@ function Year({ yearNo, yearsTillToday }) {
             <Week key={ week } yearNo={ yearNo } yearsTillToday={ yearsTillToday } weekNo={ week } />
         );
     });
+    let optionalClassName;
+    
+    if (yearNo % 10 === 0) {
+        optionalClassName = "decade-end-year";
+    }
+
 
     return (
-        <div className="year">
-            <span className="year-no">{ String(yearNo).padStart(2, '0') }</span>{ year }
+        <div className={`year ${ optionalClassName }`}>
+            { year }<span className="year-no">{ String(yearNo + 1).padStart(2, '0') }</span>
         </div>
     );
 }
