@@ -5,7 +5,7 @@ function Year({ yearNo, yearsTillToday }) {
     let year = Array.from(Array(52).keys());
     year = year.map((week) => {
         return (
-            <Week key={ week } yearNo={ yearNo } yearsTillToday={ yearsTillToday } />
+            <Week key={ week } yearNo={ yearNo } yearsTillToday={ yearsTillToday } weekNo={ week } />
         );
     });
 
