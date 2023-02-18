@@ -3,9 +3,15 @@
 }
 
 .year-no {
-    font-size: small;
+    font-size: xx-small;
 }
 
 .decade-end-year {
     margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .year-no {
+        font-size: small;
+    }
 }

@@ -1,9 +1,9 @@
 .week {
     display: inline-block;
-    height: 10px;
-    width: 10px;
-    border-radius: 2px;
-    margin: 0 2px;
+    height: 4px;
+    width: 4px;
+    border-radius: 0.5px;
+    margin: 0 1px;
     background-color: rgb(188, 188, 255);
 }
 
@@ -13,4 +13,17 @@
 
 .middle-week {
     margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .week {
+        height: 10px;
+        width: 10px;
+        border-radius: 2px;
+        margin: 0 2px;
+    }
+
+    .middle-week {
+        margin-right: 10px;
+    }   
 }

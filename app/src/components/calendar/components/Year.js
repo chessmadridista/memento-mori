@@ -8,7 +8,7 @@ function Year({ yearNo, yearsTillToday }) {
             <Week key={ week } yearNo={ yearNo } yearsTillToday={ yearsTillToday } weekNo={ week } />
         );
     });
-    let optionalClassName;
+    let optionalClassName = "";
     
     if (yearNo % 10 === 0) {
         optionalClassName = "decade-end-year";
