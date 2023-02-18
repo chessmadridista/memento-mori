@@ -1,13 +1,21 @@
 import styles from './Form.module.scss';
 import { Card } from 'antd';
 import { DatePicker, Button, Form, InputNumber } from 'antd';
-
+import { useNavigate } from 'react-router-dom';
 
 function FormContainer() {
+    const NAVIGATE = useNavigate();
+    
+    function onFinish(value) {
+        NAVIGATE("/calendar");
+    }
+
     return (
         <Card className={ styles.card }>
-            <Form className={ styles.form }
-            layout="vertical">
+            <Form 
+            className={ styles.form }
+            layout="vertical"
+            onFinish={ onFinish }>
                 <Form.Item
                     label="Birthdate (YYYY-MM-DD)"
                     name="birthdate"
@@ -19,7 +27,7 @@ function FormContainer() {
                             },
                         ]
                     }>
-                    <DatePicker className={ styles.input } placeholder="1996-09-15" />
+                    <DatePicker className={ styles.input } disabledDate={ d => d.isAfter(Date())} placeholder="1996-09-15" />
                 </Form.Item>
                 <Form.Item
                     label="Death age"
