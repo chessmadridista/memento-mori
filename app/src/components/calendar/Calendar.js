@@ -1,5 +1,8 @@
 import styles from './Calendar.module.css';
 import Year from './components/Year';
+import { Button } from 'antd';
+import { ArrowLeftOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 function Calendar() {
     let yearsTillToday = 25;
@@ -11,9 +14,12 @@ function Calendar() {
     });
 
     return (
-        <div className={ styles.calendar }>
-            { years }
-        </div>
+        <>
+            <Button type="link" href="/" icon={ <ArrowLeftOutlined /> }>Back</Button>
+            <div className={ styles.calendar }>
+                { years }
+            </div>
+        </>
     );
 }
 
