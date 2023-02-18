@@ -1,21 +1,27 @@
 import styles from './App.module.scss';
+import FormContainer from './components/form/Form';
 import Calendar from './components/calendar/Calendar';
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
-// import FormContainer from './components/form/Form';
-// import { useState } from 'react';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <FormContainer />,
+  },
+  {
+    path: '/calendar',
+    element: <Calendar />,
+  },
+]);
 
 function App() {
-  // const [showForm, setShowForm] = useState(true);
-
   return (
     <>
       <h1 className={ styles.heading }>Memento Mori Calendar</h1>
-      {/* <FormContainer /> */}
-      <Calendar />
-      {/* { showForm ? <FormContainer /> : <Calendar /> } */}
+      <RouterProvider router={ router } />
     </>
   );
 }
