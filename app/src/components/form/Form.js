@@ -7,7 +7,8 @@ function FormContainer() {
     const NAVIGATE = useNavigate();
     
     function onFinish(value) {
-        NAVIGATE("/calendar");
+        const PATH = "/calendar";
+        NAVIGATE(PATH);
     }
 
     return (

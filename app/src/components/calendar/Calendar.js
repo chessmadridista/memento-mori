@@ -13,9 +13,16 @@ function Calendar() {
         );
     });
 
+    const NAVIGATE = useNavigate();
+
+    function backToHome() {
+        const PATH = "/";
+        NAVIGATE(PATH);
+    }
+
     return (
         <>
-            <Button type="link" href="/" icon={ <ArrowLeftOutlined /> }>Back</Button>
+            <Button type="link" icon={ <ArrowLeftOutlined /> } onClick={ backToHome }>Back</Button>
             <div className={ styles.calendar }>
                 { years }
             </div>
