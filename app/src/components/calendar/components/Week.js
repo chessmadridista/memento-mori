@@ -1,10 +1,14 @@
 import './Week.css';
 
-function Week({ yearNo, lifeExpectancy }) {
+function Week({ yearNo, yearsTillToday, weekNo }) {
     let optionalClassName = "";
 
-    if (yearNo < lifeExpectancy) {
-        optionalClassName = "is-year-over";
+    if (yearNo < yearsTillToday) {
+        optionalClassName += "is-year-over";
+    }
+
+    if (weekNo == 25) {
+        optionalClassName += " " + "middle-week"
     }
 
     return (

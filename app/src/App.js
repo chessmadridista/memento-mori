@@ -1,11 +1,27 @@
-import './App.css';
+import styles from './App.module.scss';
+import FormContainer from './components/form/Form';
 import Calendar from './components/calendar/Calendar';
-// import { useState } from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <FormContainer />,
+  },
+  {
+    path: '/calendar',
+    element: <Calendar />,
+  },
+]);
 
 function App() {
   return (
     <>
-      <Calendar />
+      <h1 className={ styles.heading }>Memento Mori Calendar</h1>
+      <RouterProvider router={ router } />
     </>
   );
 }
