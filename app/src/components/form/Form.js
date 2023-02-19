@@ -6,7 +6,14 @@ import { useNavigate } from 'react-router-dom';
 function FormContainer() {
     const NAVIGATE = useNavigate();
     
-    function onFinish(value) {
+    function onFinish(values) {
+        const BIRTHDATE = values["birthdate"]["$d"];
+        const CURRENT_DATE = new Date();
+        const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_MILLISEC = Math.abs(BIRTHDATE - CURRENT_DATE);
+        const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_DAYS = Math.round(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_MILLISEC / (1000 * 60 * 60 * 24));
+        const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_WEEKS = Math.round(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_DAYS / 7);
+        const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS = Math.round(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_DAYS / 365);
+        console.log(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_DAYS);
         const PATH = "/calendar";
         NAVIGATE(PATH);
     }
