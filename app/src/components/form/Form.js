@@ -2,6 +2,7 @@ import styles from './Form.module.scss';
 import { Card } from 'antd';
 import { DatePicker, Button, Form, InputNumber } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { setNoOfWeeks, setNoOfYears, setAgeAtDeath } from '../calendar/calendarSlice';
 
 function FormContainer() {
     const NAVIGATE = useNavigate();

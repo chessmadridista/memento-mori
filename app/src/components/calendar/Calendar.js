@@ -3,13 +3,15 @@ import Year from './components/Year';
 import { Button } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Calendar() {
-    let yearsTillToday = 25;
+    // let noOfYearsSinceBirth = 25;
+    const noOfYearsSinceBirth = useSelector((state) => state.calendar.noOfYearsSinceBirth);
     let years = Array.from(Array(80).keys());
     years = years.map((year) => {
         return (
-            <Year key={ year } yearNo={ year } yearsTillToday={ yearsTillToday } />
+            <Year key={ year } yearNo={ year } yearsTillToday={ noOfYearsSinceBirth } />
         );
     });
 
