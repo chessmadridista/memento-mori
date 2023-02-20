@@ -8,7 +8,7 @@ function Week({ yearNo, yearsTillToday, weekNo }) {
     }
 
     if (weekNo == 25) {
-        optionalClassName += " " + "middle-week"
+        optionalClassName += " " + "middle-week";
     }
 
     return (
