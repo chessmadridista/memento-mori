@@ -9,7 +9,7 @@ function Week({ yearNo, yearsTillToday, weekNo }) {
         optionalClassName += "is-year-over";
     }
 
-    if (yearNo === yearsTillToday && weekNo <= weeksTillToday) {
+    if (yearNo === yearsTillToday && weekNo < weeksTillToday) {
         optionalClassName += " " + "active-week-of-current-year";
     }
 
