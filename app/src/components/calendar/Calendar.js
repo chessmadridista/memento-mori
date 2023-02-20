@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Calendar() {
-    // let noOfYearsSinceBirth = 25;
     const noOfYearsSinceBirth = useSelector((state) => state.calendar.noOfYearsSinceBirth);
     let years = Array.from(Array(80).keys());
     years = years.map((year) => {

@@ -11,8 +11,13 @@
     background-color: #030050;
 }
 
+
 .middle-week {
     margin-right: 10px;
+}
+
+.active-week-of-current-year {
+    background-color: #030050;
 }
 
 @media (min-width: 768px) {
