@@ -3,7 +3,7 @@ import Year from './components/Year';
 import { Button } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Calendar() {
     // let noOfYearsSinceBirth = 25;
