@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 
 function Calendar() {
     const noOfYearsSinceBirth = useSelector((state) => state.calendar.noOfYearsSinceBirth);
-    let years = Array.from(Array(80).keys());
+    const AGE_AT_DEATH = useSelector((state) => state.calendar.ageAtDeath);
+    let years = Array.from(Array(AGE_AT_DEATH).keys());
     years = years.map((year) => {
         return (
             <Year key={ year } yearNo={ year } yearsTillToday={ noOfYearsSinceBirth } />

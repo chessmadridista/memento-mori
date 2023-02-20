@@ -18,11 +18,6 @@ function FormContainer() {
         const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS = Math.trunc(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS_FLOAT);
         const NO_OF_WEEKS_SINCE_LAST_BIRTHDAY = Math.trunc(Number("0." + DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS_FLOAT.toString().split('.')[1]) * 52);
         const AGE_AT_DEATH = values["death age"];
-
-        console.log("millisec", DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_MILLISEC);
-        console.log("days", DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_DAYS);
-        console.log("years", DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS);
-        console.log("weeks", NO_OF_WEEKS_SINCE_LAST_BIRTHDAY);
         DISPATCH(setNoOfWeeks(NO_OF_WEEKS_SINCE_LAST_BIRTHDAY));
         DISPATCH(setNoOfYears(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS));
         DISPATCH(setAgeAtDeath(AGE_AT_DEATH));
