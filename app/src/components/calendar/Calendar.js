@@ -24,7 +24,7 @@ function Calendar() {
 
     return (
         <>
-            <Button type="link" icon={ <ArrowLeftOutlined /> } onClick={ backToHome }>Back</Button>
+            <Button className={ styles.btn__back } type="link" icon={ <ArrowLeftOutlined /> } onClick={ backToHome }>Back</Button>
             <div className={ styles.calendar }>
                 { years }
             </div>
