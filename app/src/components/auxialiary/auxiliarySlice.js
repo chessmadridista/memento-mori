@@ -21,3 +21,6 @@ export const auxiliarySlice = createSlice({
         },
     },
 });
+
+export const { showSpinner, hideSpinner, showNotification, hideNotification } = auxiliarySlice.actions;
+export default auxiliarySlice.reducer;
