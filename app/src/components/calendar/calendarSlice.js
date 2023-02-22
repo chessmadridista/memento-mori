@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const calendarSlice = createSlice({
-    name: 'counter',
+    name: 'calendar',
     initialState: {
         value: 0,
         noOfWeeksInCurrentYear: 0,
@@ -9,15 +9,6 @@ export const calendarSlice = createSlice({
         ageAtDeath: 0,
     },
     reducers: {
-        increment: (state) => {
-            state.value += 1;
-        },
-        decrement: (state) => {
-            state.value -= 1;
-        },
-        incrementByAmount: (state, action) => {
-            state.value += action.payload;
-        },
         setNoOfWeeks: (state, action) => {
             state.noOfWeeksInCurrentYear = action.payload;
         },
