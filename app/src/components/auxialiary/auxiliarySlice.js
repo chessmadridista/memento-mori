@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 export const auxiliarySlice = createSlice({
     name: 'auxiliary',
     initialState: {
-        spinner: false,
+        loading: false,
         notification: false,
     },
     reducers: {
         showSpinner: (state) => {
-            state.spinner = true;
+            state.loading = true;
         },
         hideSpinner: (state) => {
-            state.spinner = false;
+            state.loading = false;
         },
         showNotification: (state) => {
             state.notification = true;

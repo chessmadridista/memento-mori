@@ -3,6 +3,7 @@ import { Card } from 'antd';
 import { DatePicker, Button, Form, InputNumber } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { setNoOfWeeks, setNoOfYears, setAgeAtDeath } from '../calendar/calendarSlice';
+import { hideSpinner, showSpinner } from '../auxialiary/auxiliarySlice';
 import { useDispatch } from 'react-redux';
 
 function FormContainer() {
@@ -10,6 +11,7 @@ function FormContainer() {
     const DISPATCH = useDispatch();
     
     function onFinish(values) {
+        DISPATCH(showSpinner());
         const BIRTHDATE = values["birthdate"]["$d"];
         const CURRENT_DATE = new Date();
         const DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_MILLISEC = Math.abs(CURRENT_DATE - BIRTHDATE);
@@ -22,7 +24,10 @@ function FormContainer() {
         DISPATCH(setNoOfYears(DIFFERENCE_BETWEEN_DOB_AND_CURRENT_DATE_IN_YEARS));
         DISPATCH(setAgeAtDeath(AGE_AT_DEATH));
         const PATH = "/calendar";
-        NAVIGATE(PATH);
+        setTimeout(() => {
+            NAVIGATE(PATH);
+            DISPATCH(hideSpinner());
+        }, 1000);
     }
 
     return (

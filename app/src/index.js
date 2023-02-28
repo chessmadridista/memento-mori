@@ -1,16 +1,32 @@
+import FormContainer from './components/form/Form';
+import Calendar from './components/calendar/Calendar';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { Provider } from 'react-redux';
+import { createBrowserRouter, BrowserRouter } from 'react-router-dom';
 import store from './store/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <FormContainer />,
+//   },
+//   {
+//     path: '/calendar',
+//     element: <Calendar />,
+//   },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

@@ -4,26 +4,26 @@ import Calendar from './components/calendar/Calendar';
 import Spinner from './components/auxialiary/spinner/Spinner';
 import {
   createBrowserRouter,
+  Route,
   RouterProvider,
+  Routes,
+  useLocation,
 } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <FormContainer />,
-  },
-  {
-    path: '/calendar',
-    element: <Calendar />,
-  },
-]);
+import { showSpinner, hideSpinner, showNotification, hideNotification } from './components/auxialiary/auxiliarySlice';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
+  const loading = useSelector((state) => state.auxiliary.loading);
+
   return (
     <>
-      <Spinner />
+      { loading ? <Spinner /> : null }
       <h1 className={ styles.heading }>Memento Mori Calendar</h1>
-      <RouterProvider router={ router } />
+      <Routes>
+        <Route path='/' element={ <FormContainer /> }></Route>
+        <Route path='/calendar' element={ <Calendar /> }></Route>
+      </Routes>
     </>
   );
 }
