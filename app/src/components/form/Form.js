@@ -57,7 +57,12 @@ function FormContainer() {
                             {
                                 required: true,
                                 message: "Please enter age at your death.",
-                            }
+                            },
+                            {
+                                type: "number",
+                                max: 200,
+                                message: "Please enter age less than or equal to 200.",
+                            },
                         ]
                     }>
                     <InputNumber className={ styles.input } addonAfter="years" placeholder="80" />
