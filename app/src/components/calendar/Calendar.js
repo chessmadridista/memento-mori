@@ -23,8 +23,8 @@ function Calendar() {
         DISPATCH(showSpinner());
         const PATH = "/";
         setTimeout(() => {
-            DISPATCH(hideSpinner());
             NAVIGATE(PATH);
+            DISPATCH(hideSpinner());
         }, 1000);
     }
 
