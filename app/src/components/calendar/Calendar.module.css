@@ -2,3 +2,11 @@
     margin: 50px 0;
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    .btn__back {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+}

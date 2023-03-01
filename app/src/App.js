@@ -1,27 +1,24 @@
 import styles from './App.module.scss';
 import FormContainer from './components/form/Form';
 import Calendar from './components/calendar/Calendar';
+import Spinner from './components/auxialiary/spinner/Spinner';
 import {
-  createBrowserRouter,
-  RouterProvider,
+  Route,
+  Routes,
 } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <FormContainer />,
-  },
-  {
-    path: '/calendar',
-    element: <Calendar />,
-  },
-]);
+import { useSelector } from 'react-redux';
 
 function App() {
+  const loading = useSelector((state) => state.auxiliary.loading);
+
   return (
     <>
+      { loading ? <Spinner className={ styles.loader } /> : null }
       <h1 className={ styles.heading }>Memento Mori Calendar</h1>
-      <RouterProvider router={ router } />
+      <Routes>
+        <Route path='/' element={ <FormContainer /> }></Route>
+        <Route path='/calendar' element={ <Calendar /> }></Route>
+      </Routes>
     </>
   );
 }
