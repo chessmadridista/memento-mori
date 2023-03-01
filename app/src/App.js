@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      { loading ? <Spinner /> : null }
+      { loading ? <Spinner className={ styles.loader } /> : null }
       <h1 className={ styles.heading }>Memento Mori Calendar</h1>
       <Routes>
         <Route path='/' element={ <FormContainer /> }></Route>
