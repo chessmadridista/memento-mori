@@ -52,6 +52,7 @@ function FormContainer() {
                 <Form.Item
                     label="Death age"
                     name="death age"
+                    type="number"
                     rules={
                         [
                             {
