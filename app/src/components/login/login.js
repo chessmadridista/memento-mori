@@ -1,9 +1,20 @@
 import styles from './login.module.css';
 import { Card, Form, Input, Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { hideSpinner, showSpinner } from '../auxialiary/auxiliarySlice';
 
 function Login() {
+    const NAVIGATE = useNavigate();
+    const DISPATCH = useDispatch();
+
     function onFinish() {
-        alert("Your form has been submitted.");
+        DISPATCH(showSpinner());
+        const PATH = "/";
+        setTimeout(() => {
+            NAVIGATE(PATH);
+            DISPATCH(hideSpinner());
+        }, 1000);
     }
 
     return (
