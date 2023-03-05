@@ -19,11 +19,11 @@ function Login() {
                     [
                         {
                             required: true,
-                            message: "Please enter your birth date.",
+                            message: "Please enter your username.",
                         },
                     ]
                 }>
-                <Input type="text" className={ styles.input } addonAfter="years" placeholder="80" />
+                <Input type="text" className={ styles.input } placeholder="johndoe" allowClear />
             </Form.Item>
             <Form.Item
                 label="Password"
@@ -32,11 +32,11 @@ function Login() {
                     [
                         {
                             required: true,
-                            message: "Please enter age at your death.",
+                            message: "Please enter your password.",
                         },
                     ]
                 }>
-                <Input type="password" className={ styles.input } addonAfter="years" placeholder="80" />
+                <Input type="password" className={ styles.input } placeholder="doe123john" allowClear />
             </Form.Item>
             <Form.Item>
                 <Button type="primary" htmlType="submit" block>Login</Button>
