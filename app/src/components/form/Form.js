@@ -52,7 +52,6 @@ function FormContainer() {
                 <Form.Item
                     label="Death age"
                     name="death age"
-                    type="number"
                     rules={
                         [
                             {
@@ -66,7 +65,7 @@ function FormContainer() {
                             },
                         ]
                     }>
-                    <InputNumber className={ styles.input } addonAfter="years" placeholder="80" />
+                    <InputNumber type="number" className={ styles.input } addonAfter="years" placeholder="80" />
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" block>Show calendar</Button>
